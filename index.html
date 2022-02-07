@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>서울여자대학교</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script>
+const all = ele => document.querySelectorAll(ele)
+const one = ele => document.querySelector(ele)
+const slide = _ => {
+  const wrap = one('.slide') // .slide 선택
+  const target = wrap.children[0] // .slide ul 선택
+  const len = target.children.length // .slide li 갯수
+  // .slide ul의 너비 조정
+  target.style.cssText = `width:calc(100% * ${len});display:flex;transition:1s`
+  // .slide li의 너비 조정
+  Array.from(target.children)
+  .forEach(ele => ele.style.cssText = `width:calc(100% / ${len});`)
+  // 화면 전환 실행
+  let pos = 0
+  setInterval(() => {
+    pos = (pos + 1) % len // 장면 선택
+    target.style.marginLeft = `${-pos * 100}%`
+  }, 3000) // 1500 = 1500ms = 1.5sec. 즉, 1.5초 마다 실행
+}
+window.onload = function () {
+  slide()
+}
+</script>
+</head>
+<body>
+  <p id="bar"><span id=language>ENG </span><span id=language style="margin-right: 800px;">CHN</span><a href="login.html" style="text-decoration: none; color: white"> LOGIN</a><span>ㅣWEBMAILㅣSITEMAP&nbsp&nbsp</span>
+   <span id="search">
+      
+         <input type="text" value="SEARCH" style="background-color: gray; color: silver; height: 30px;">
+         <input type="image" src="http://www.swu.ac.kr/front/layout/header/search.png" style="height: 30px">
+      
+   </span>
+</p>
+      <!-- <button style="background-color: gray" "background-size: 3px 3px"><img src="http://www.swu.ac.kr/front/layout/header/search.png"></button>  -->
+
+<nav id="menu">
+   <div class="sub">
+      <ul>
+      <li id="logo"><a href ="#"><img src="http://www.swu.ac.kr/front/layout/header/logo.png" style="padding-left: 170px; padding-right: 100px"></a></li>
+      <li  id=""style="padding-left: 100px"><a href ="#">대학소개</a>
+         <ul class="submenu">
+            <li><a href ="#">교육목표</a></li>
+            <li><a href ="#">역사&비전</a></li>
+            <li><a href ="#">총장실</a></li>
+            <li><a href ="ui.html">대학상징</a></li>
+            <li><a href ="#">대학기관</a></li>
+            <li><a href ="#">대학발전기금</a></li>
+            <li><a href ="#">바롬기념관</a></li>
+            <li><a href ="#">학교법인</a></li>
+            <li><a href ="#">캠퍼스안내</a></li>
+            <li><a href ="map.html">학교오시는길</a></li>
+         </ul>
+      </li>
+      <li><a href ="#">입학정보</a>
+      <ul class="submenu">
+            <li><a href ="#">대학</a></li>
+            <li><a href ="#">대학원</a></li>
+            <li><a href ="#">교육대학원</a></li>
+            <li><a href ="#">휴먼서비스대학원</a></li>      
+         </ul>
+      </li>
+      <li><a href ="#">대학/대학원</a>
+         <ul class="submenu">
+            <li><a href ="#">인문대학</a></li>
+            <li><a href ="#">사회과학대학</a></li>
+            <li><a href ="#">자연과학대학</a></li>
+            <li><a href ="#">미래산업융합대학</a></li>
+            <li><a href ="#">아트앤디자인스쿨</a></li>
+            <li><a href ="#">자율전공학부</a></li>
+            <li><a href ="#">연계융합전공</a></li>
+            <li><a href ="#">바롬인성교육원</a></li>
+            <li><a href ="#">기초교육원</a></li>
+            <li><a href ="#">일반대학원</a></li>
+            <li><a href ="#">특수대학원</a></li>
+            <li><a href ="#">전문대학원</a></li>
+         </ul>
+      </li>
+      <li><a href ="#">대학생활</a>
+      <ul class="submenu">
+            <li><a href ="#">학사안내</a></li>
+            <li><a href ="#">장학</a></li>
+            <li><a href ="#">학자금대출</a></li>
+            <li><a href ="#">장애학생지원</a></li>
+            <li><a href ="#">사회봉사</a></li>
+            <li><a href ="#">학생지원</a></li>
+            <li><a href ="#">교직/평생교육사안내</a></li>
+            <li><a href ="#">국제교류프로그램</a></li>
+            <li><a href ="#">특색프로그램</a></li>
+            <li><a href ="#">취업경력개발</a></li>
+         </ul></li>
+      <li><a href ="#">SWU홍보</a>
+      <ul class="submenu">
+            <li><a href ="#">SWU뉴스</a></li>
+            <li><a href ="#">SWU포커스</a></li>
+            <li><a href ="#">언론보도</a></li>
+            <li><a href ="#">홍보갤러리</a></li>
+            <li><a href ="#">홍보바름이</a></li>
+            <li><a href ="#">홍보소재 제안</a></li>
+         </ul></li>
+      <li><a href ="#">열린캠퍼스</a>
+      <ul class="submenu">
+            <li><a href ="#">공지사항</a></li>
+            <li><a href ="#">상담실</a></li>
+            <li><a href ="#">FAQ</a></li>
+            <li><a href ="#">자유게시판</a></li>
+            <li><a href ="#">벼룩시장</a></li>
+            <li><a href ="#">분실물/습득물</a></li>
+            <li><a href ="#">학교생활TIP</a></li>
+            
+         </ul></li>
+   </ul>
+</div>
+</nav>
+<section>
+<div class="slide">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<br><br>
+<p style="color: firebrick; font-weight: 900; text-align: center;">SWU&nbsp&nbsp<span style="color: silver; font-weight: 900">NOTICE</span></p>
+      <div id="notice">
+        <div><ul id="middle">
+      <br>
+      <li><a href ="#">학사</a></li>
+      <li><a href ="#">장학</a></li>
+      <li style="padding-bottom: 10px"><a href ="#">행사</a></li><hr>
+      </ul></div><br>
+      <p><a href ="#">2019학년도 전기 졸업 가능여부 조회기간 안내 </a></p><br>
+      <P><a href ="#">2010학년도 1학기 휴학신청 안내</a></P><br>
+      <P><a href ="#">2020학년도 신입생 수강신청 일정 및 방법 안내</a></P><br>
+      <P><a href ="#">2019년 귀속 연말정산 세액공제용 교육비납입증명서 발급 안내</a></P><br>
+      <P><a href ="#">2020학년도 1학기 바롬인성교육관 10층 기숙실 재학생 입사신청...</a></P><br>
+      <P><a href ="#">2020학년도 1학기 국제생활관 재학생 입사신청 안내</a></P><br>
+      <P><a href ="#">2020학년도 1학기 타대학 학점교류 신청 안내(서울과학기술대학교)</a></P></div><br>
+   <div><ul id="middle">
+      <li><a href ="#">채용/취업</a></li>
+      <li style="margin-bottom: 10px"><a href ="#">일반/봉사</a></li>
+      <hr width="400">
+   </ul><br>
+      <p style="padding-top: 10px;"><a href ="#">[취업경력개발팅]동계방학 진로취업 교육프로그램 안내</a></p><br>
+      <P><a href ="#">[중어중문학과] 원생조교 추가 모집 공고</a></P><br>
+      <P><a href ="#">[바롬인성교육원] 교육조교 모집 공고</a></P><br>
+      <P><a href ="#">[바롬인성교육연구소] 원생조교모집 연장 공고</a></P><br>
+      <P><a href ="#">[아동학과] 원생조교 추가모집 공고</a></P><br>
+      <P><a href ="#">[언론영상학부] 학사조교 추가 모집 공고</a></P><br>
+      <P><a href ="#">[교육심리학과] 원생조교 모집 연장 공고</a></P></div><br><br>
+</div>
+
+<div id="notice">
+   <ul id="middle">
+      <li style="border: 0px"><span style="text-decoration-line: underline; text-decoration-color: silver">언</span>론에 비친 <span style="color: firebrick; font-weight: 900">SWU</span></li></ul><br>
+   <p style="font-size: 20px"><a href="#" style="text-decoration-line: none;">[교직지원센터] 서울여자대학교,'2019학년도 예비교사 수업...'</a></p><br>
+   <p style="font-size: 10px">(사진서울여대)[에듀인뉴스한치원 기자] 서울여자대학교는 지난 8일 서울여대 50주년기념관에서 '2019학년도<br>예비교사 수업 경연대회'...</p><br>
+   <a href="#"><p id="round">MORE</p></a><br>
+</div>
+<div>
+   <p><a href ="http://www.kyeongin.com/main/view.php?key=20200112010002668" target="_blank">[서준희동문]광명시 개청후 첫'사서직'이 홍보담당관 발탁</a></p><br>
+      <P><a href ="#">[교직지원센터] 서울여자대학교, '2019학년도 예비교사 수업 경연...</a></P><br>
+      <P><a href ="#">[입학처] 서울여대, 2020학년도 정시모집 경쟁률 5.94 대 1로 마감</a></P><br>
+      <P><a href ="#">[엄연숙동문] 영월 출신 엄연숙 국장 서울물연구원장으로 이동</a></P><br>
+      <P><a href ="#">[서울여대] 사회적 가치 일깨우는 '교육혁신대학'서울여자대학교</a></P><br>
+</div><br><br>
+<p style="color: firebrick; font-weight: 900; text-align: center;">SWU&nbsp&nbsp<span style="color: silver; font-weight: 900">NEWS</span></p><br>
+<table style="text-align: center">
+   <tbody>
+      <tr id="news"><td style="padding-left: 350px"><a href="#"><img src="media/news1.png" width="300" height="350"></a></td><td><a href="#"><img src="media/news2.png" width="300" height="350"></a></td><td><a href="#"><img src="media/news3.png" width="300" height="350"></a></td><td><a href="#"><img src="media/news4.png" width="300" height="350"></a></td>
+      </tr>
+   </tbody>
+</table><br>
+<p style="color: firebrick; font-weight: 900; text-align: center;">SWU&nbsp&nbsp<span style="color: silver; font-weight: 900">FOCUS</span></p><br>
+<table >
+   <tbody>
+      <tr id="news"><td style="padding-left: 350px"><a href="#"><img src="media/focus1.png" width="300" height="350"></a></td><td><a href="#"><img src="media/focus2.png" width="300" height="350"></a></td><td><a href="#"><img src="media/focus3.png" width="300" height="350"></a></td><td><a href="#"><img src="media/focus4.png" width="300" height="350"></a></td>
+      </tr>
+   </tbody>
+</table>
+<br>
+<table style="align-content: center">
+   <tbody>
+      <tr ><td style="padding-left: 350px"><a href="#"><img src="media/info1.png" width="300" height="150"></a></td><td><a href="#"><img src="media/info2.png" width="300" height="150"></a></td><td><a href="#"><img src="media/info3.png" width="300" height="150"></a></td><td><a href="#"><img src="media/info4.png" width="300" height="150"></a></td>
+      </tr>
+   </tbody>
+</table>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>  
+</div>
+<br><br>
+<div id="notice" style="border-right: none">
+<p><span style="color: firebrick; font-size: 15px; font-weight: 900">SWU</span> 홍보동영상</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qpiqz1J3S9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></div>
+<p><span style="color: firebrick; font-size: 15px; font-weight: 900">SWU</span> 캘린더</p>
+<table style="border-top: 1px solid gray">
+<tbody>
+<tr><td style="border-right: 1px solid gray; padding-right: 50px"><p><span style="color:firebrick; font-weight:900">11.04 ~ 02.29</span><br>
+[도서관] 1층(전체) 교육·환경 개선...</span></p>
+<p><span style="color:firebrick; font-weight:900">12.06 ~ 03.05</span><br>
+2020-1 복학신청 안내</p>
+<p><span style="color:firebrick; font-weight:900">01.08 ~ 01.20</span><br>
+2020-1 국제생활관 재학생 입사신...</p>
+<p><span style="color:firebrick; font-weight:900">01.08 ~ 02.25</span><br>
+2020 신입생 수강신청 일정 및 방...</p>
+<p><span style="color:firebrick; font-weight:900">01.09 ~ 02.19</span><br>
+「2020학년도 신입생 학부모 오리...</p></td>
+<td style="vertical-align: top;"><p><span style="color:firebrick; font-weight:900">01.14 ~ 06.12</span><br>
+2020-1 휴학신청 안내</p><br>
+SWU 캘린더 더보기</td></tr></tbody></table><br>
+<a href="http://www.swu.ac.kr/vr/" target="_blank"><img src="http://www.swu.ac.kr/front/imgs/index/vr0.png"></a>
+</section>
+<footer id="foot">
+   <div>
+      <div style="color: white; padding-left: 200px">
+         <ul>
+            <li style="border-right: 2px dotted">개인 정보 처리 방침</li>
+            <li style="border-right: 2px dotted">예결산 및 기타공고</li>
+            <li style="border-right: 2px dotted">정보공개</li>
+            <li>시스템불편사항신고</li>      
+         </ul>
+      </div>
+      <div>
+         <form style=" padding-left: 400px ">
+            <select name="site" style="height: 35px; width: 350px;">
+               <option value="1" selected>관련기관 사이트</option>
+               <option value="2">샬롬하우스(기숙사)</option>
+               <option value="3">소프트웨어중심대학사업단</option>
+               <option value="4">연구실 안전 관리</option>   
+            </select>
+            <input type="submit" value="이동" style="background-color: gray; color: white;">
+         </form>
+      </div>
+   </div>
+   <hr>
+   <div>
+      <div style="padding:20px 0px 20px 200px">01797 서울특별시 노원구 화랑로 621 서울여자대학교 <strong>TEL</strong> 02-970-5114 <strong>FAX</strong> 02-978-7931<br>
+      <span style="color: slategray">COPYRIGHT(C) SEOUL WOMEN’S UNIVERSITY. ALL RIGHTS RESERVED.</span>
+      </div>
+      <div style="padding-left: 500px"><a href="https://swuman.com/" target="_blank"><img src="media/social0.png" alt="슈먼닷컴으로 이동"></a>
+      <a href="https://www.facebook.com/seoulwomensuniv" target="_blank"><img src="media/social1.png" alt="서울여자대학교 페이스북으로 이동"></a>
+      <a href="https://blog.naver.com/seoul_womens" target="_blank"><img src="media/social2.png" alt="서울여자대학교 네이버블로그로 이동"></a>
+      <a href="https://www.youtube.com/user/seoulwomensuniv" target="_blank"><img src="media/social3.png" alt="서울여자대학교 유투브로 이동"></a>
+      <a href="https://www.instagram.com/swu.official/" target="_blank"><img src="media/social4.png" alt="서울여자대학교 인스타그램으로 이동"></a></div>
+   </div>
+</footer>
+</body>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* mystyle.css */
+
+*{font:"Nanum Gothic";}
+#bar{background-color: #A4A4A4;
+background-size: 100% 30px;
+color: white;
+font-size: 11px;text-align: right;
+padding-right: 200px;
+}
+#bar>span{color: #D8D8D8;}
+#search{padding:none; margin: none}
+#language{border-left: 1px solid white; border-right: 1px solid white; color:white; padding-left: 10px; padding-right: 10px}
+#logo{
+   float: left;
+}
+#middle li{
+   display: inline-block;
+}
+#middle li a{
+   list-style-type: none;
+   padding: 10px 5px 10px 0px;
+   text-decoration: none;
+   text-align: center;
+   font-size: 18px;
+   color: grey;
+   font-weight: 400;
+}
+#middle li a:hover{
+   color:firebrick;
+   border-bottom: 4px solid firebrick;
+}
+#notice{border-right: 1px solid silver; float: left; margin-left: 340px; padding-right: 40px;margin-right: 50px }
+div p a{text-decoration: none;
+color: black}
+div p a:hover{text-decoration-line: underline;}
+div p span{
+   color: silver;
+   font-size: 10px;
+}
+#menu ul li{
+   display: inline-block;
+   list-style-type: none;
+   padding: 20px 30px 30px;
+}
+#menu ul li a{
+   font-size: 18px;
+   color: grey;
+   text-decoration: none;
+   font-weight: 400;
+}
+#menu ul li li a{
+   font-size: 13px;
+   font-family:"Nanum Gothic";
+   color: grey;
+   text-decoration: none;
+   font-weight: 400;
+
+}
+#menu ul li a:hover{
+   font-weight: 900;
+   color: firebrick;
+}
+.sub li ul{
+background: white;
+display:none;  /* 평상시에는 서브메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:1px solid silver;
+position:absolute;
+width:150px;
+font-size: 7px;
+z-index:200;
+}
+.sub ul li:hover ul{
+   display: block;
+}
+.sub ul li ul: hover{
+   background: aliceblue;
+}
+.sub ul li ul li a:hover{
+   font-size: 7px;
+   color: firebrick;
+   border-left: 4px solid firebrick;
+   padding-left:10px;
+   text-align: left;
+}
+#foot {
+  clear: both;
+    color: darkgray;
+    background-color: dimgray; 
+    width: 100%;
+    height: 20%;
+}
+ 
+#foot div div {
+   display: inline-block;
+   padding: 0px 15px;
+}
+
+#foot div div ul li {
+   display: inline-block;
+   list-style-type: none;
+   padding: 0px 15px;
+}
+#round{
+	border-radius:20px;
+	background: black;
+	color: white;
+	width: 60px;
+	padding:5px;
+	font-size: 13px;
+	text-align: center;
+}
+ .submenu li{
+font-size: 7px;
+ }
+.symbol{
+	border: 1px solid silver; 
+   border-collapse: collapse;}
+.symbol tbody tr td{
+	border: 1px solid silver;
+	padding: 20px 40px 20px 40px;
+}
+
+#regulation{
+	border-collapse: collapse;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+	border-left: 1px solid gray;
+}
+#regulation tbody tr{
+	border-left: none;}
+#regulation tbody tr th{
+	padding: 20px 15px 20px 15px;
+	font-size: 15px;
+	color: black;
+	text-align: center;
+	border: 1px solid gray;
+	background: mintcream;
+	border-right: 0px;
+
+}
+
+#regulation tbody tr td{
+	padding: 20px 15px 20px 15px;
+	font-size: 15px;
+	color: gray;
+	text-align: center;
+	border: 1px solid gray;
+	border-right: 0px;
+	border-left: 
+}
+#left{border-left: 1px solid white;}
+.nav{
+	float: left;
+	padding-left: 250px;
+	padding-right: 150px;
+	width: 10%; height: 70%;
+}
+
+.border{
+	border-left: none:;
+}
+}
+.nav ul li{
+   list-style-type: none;
+   padding: 20px 20px 20px 20px;
+}
+strong{
+	font-size: 20px
+}
+h4{
+	font-size: 20px;
+}
+#title{
+	font-size: 15px; color: firebrick; text-decoration-style: disc;
+}
+#button a{display: inline-block; width: 200px; height: 70px; background-color: gray; color: white;
+ text-decoration: none; text-align: center; vertical-align: middle; }
